@@ -2,7 +2,7 @@ process FASTP {
     tag "$sample"
     label 'low_cpu'
     container 'quay.io/biocontainers/fastp:0.23.4--h5f740d0_0'
-    publishDir "${params.outdir}/fastp/${sample}", mode: 'copy'
+    publishDir { "${params.outdir}/fastp/${sample}" }, mode: 'copy'
 
     input:
     tuple val(sample), path(reads)

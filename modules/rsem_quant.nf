@@ -1,8 +1,8 @@
 process RSEM_QUANT {
     tag "$sample"
     label 'mid_cpu'
-    container 'quay.io/biocontainers/rsem:1.3.3--pl5321hecb563c_0'
-    publishDir "${params.outdir}/rsem/${sample}", mode: 'copy'
+    container 'quay.io/biocontainers/rsem:1.3.3--pl5321hecb563c_4'
+    publishDir { "${params.outdir}/rsem/${sample}" }, mode: 'copy'
 
     input:
     tuple val(sample), path(transcriptome_bam)

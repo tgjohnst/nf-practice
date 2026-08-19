@@ -2,7 +2,7 @@ process STAR_ALIGN {
     tag "$sample"
     label 'high_cpu'
     container 'quay.io/biocontainers/star:2.7.11b--h43eeafb_0'
-    publishDir "${params.outdir}/star/${sample}", mode: 'copy', pattern: '*.{out,tab}'
+    publishDir { "${params.outdir}/star/${sample}" }, mode: 'copy', pattern: '*.{out,tab}'
 
     input:
     tuple val(sample), path(reads)

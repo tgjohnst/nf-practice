@@ -1,7 +1,7 @@
 process BUILD_RSEM_REF {
     tag "rsem_ref"
     label 'high_cpu'
-    container 'quay.io/biocontainers/rsem:1.3.3--pl5321hecb563c_0'
+    container 'quay.io/biocontainers/rsem:1.3.3--pl5321hecb563c_4'
     publishDir params.star_index_bucket, mode: 'copy'
 
     input:
